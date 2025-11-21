@@ -11,7 +11,7 @@ To use the plugins in this marketplace with Claude Code, you must first install 
 1. Run the command to add the ai-launchpad-marketplace to Claude Code.
 
 ```bash
-/plugin marketplace add https://gitlab.com/company/plugins.git
+/plugin marketplace add https://github.com/kenneth-liao/ai-launchpad-marketplace.git
 ```
 
 You can then browse available plugins interactively by running `/plugin`.

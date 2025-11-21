@@ -35,7 +35,7 @@ GEMINI_API_KEY=your_gemini_api_key
 3. Run the command to add the ai-launchpad-marketplace
 
 ```bash
-/plugin marketplace add https://gitlab.com/company/plugins.git
+/plugin marketplace add https://github.com/kenneth-liao/ai-launchpad-marketplace.git
 ```
 
 4. Install the plugin
