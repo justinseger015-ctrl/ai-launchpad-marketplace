@@ -21,7 +21,14 @@ from youtube_transcript_api import YouTubeTranscriptApi, TranscriptsDisabled, No
 from mcp.server.fastmcp import FastMCP
 
 # Load environment variables
+# Cross-platform path to ~/.claude/.env
+claude_env_path = os.path.join(os.path.expanduser("~"), ".claude", ".env")
+if os.path.exists(claude_env_path):
+    load_dotenv(claude_env_path)
+
+# Also check local .env as fallback
 load_dotenv()
+
 YOUTUBE_API_KEY = os.getenv("YOUTUBE_API_KEY")
 
 # Configure logging
