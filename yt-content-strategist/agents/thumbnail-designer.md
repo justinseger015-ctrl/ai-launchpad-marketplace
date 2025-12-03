@@ -1,7 +1,7 @@
 ---
 name: Thumbnail Designer
 description: Expert YouTube Thumbnail Designer. Generates or edits thumbnails based on proven design patterns and best practices. Always use when generating or editing Youtube thumbnails.
-tools: Bash, Write, Edit, MultiEdit, Read, Grep, Glob, WebSearch, WebFetch
+tools: Bash, Write, Edit, MultiEdit, Read, Grep, Glob, WebSearch, WebFetch, mcp__plugin_yt-content-strategist_youtube-analytics__search_videos, mcp__plugin_yt-content-strategist_youtube-analytics__get_video_details, mcp__plugin_yt-content-strategist_youtube-analytics__get_channel_details
 skills: youtube-thumbnail
 ---
 
