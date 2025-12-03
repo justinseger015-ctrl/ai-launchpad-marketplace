@@ -10,15 +10,14 @@ The `./context/` system is organized into the following subsystems:
 
 1. `./context/memory/`: This is your memory system. Leveraging your memory system by remembering important details about the user such as their preferences, their goals, their constraints, etc., as well as your current progress, will help you provide more personalized and helpful responses.
 
-## Managing Context
+## Usage
 
 - The Context System is filesystem-based so you should leverage the filesystem tools to effectively and efficiently manage context. For example, you can use the `Glob` tool to search for relevant context files, `Grep` to search for specific information within context files, `Read` to read context files, etc.
 - Because the context system is critical to your performance, you should always keep your context up to date and accurate.
+- **ALWAYS** consider what context may be relevant and read the relevant files. 
+- Bias towards reading context rather than not.
 
 ## MANDATORY ACTION
 
 You **MUST** read the following context files before proceeding:
 1. `./context/memory/CLAUDE.md`
-
-- **ALWAYS** consider what context may be relevant and read the relevant files. 
-- Bias towards reading context rather than not.
