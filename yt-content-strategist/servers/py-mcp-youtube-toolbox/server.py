@@ -24,7 +24,7 @@ from mcp.server.fastmcp import FastMCP
 # Cross-platform path to ~/.claude/.env
 claude_env_path = os.path.join(os.path.expanduser("~"), ".claude", ".env")
 if os.path.exists(claude_env_path):
-    load_dotenv(claude_env_path)
+    load_dotenv(claude_env_path, override=True)
 
 # Also check local .env as fallback
 load_dotenv()
