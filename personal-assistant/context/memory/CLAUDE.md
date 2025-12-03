@@ -1,10 +1,10 @@
 # Memory
 
-`~/.claude/plugins/personal-assistant/context/memory/` is your memory system. The actual memories are stored in `~/.claude/plugins/personal-assistant/context/memory/memories.md`.
+`~/.claude/plugins/marketplaces/ai-launchpad/personal-assistant/context/memory/` is your memory system. The actual memories are stored in `~/.claude/plugins/marketplaces/ai-launchpad/personal-assistant/context/memory/memories.md`.
 
 ## Memory System Structure
 
-Currently, `~/.claude/plugins/personal-assistant/context/memory/memories.md` is the only memory file. You should manage all memories in this file.
+Currently, `~/.claude/plugins/marketplaces/ai-launchpad/personal-assistant/context/memory/memories.md` is the only memory file. You should manage all memories in this file.
 
 ### memories.md File Structure
 
