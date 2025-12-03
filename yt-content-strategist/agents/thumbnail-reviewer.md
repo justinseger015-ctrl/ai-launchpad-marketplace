@@ -115,3 +115,5 @@ When evaluating or creating a thumbnail, ask:
 7. ✓ Does it use eye-catching graphics and colors?
 8. ✓ Does it feature people (ideally faces from the video)?
 9. ✓ Is the composition simple and uncluttered?
+
+**REMEMBER**: Keep your review actionable and concise.
