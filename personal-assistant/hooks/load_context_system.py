@@ -1,48 +1,67 @@
+#!/usr/bin/env python3
+"""
+UserPromptSubmit hook to load context system into Claude's context.
+"""
+
 import json
 import sys
 from pathlib import Path
 
-# Add project root to sys.path for imports
-root = Path(__file__).resolve().parents[2]
-if str(root) not in sys.path:
-    sys.path.insert(0, str(root))
+
+def get_hook_root() -> Path:
+    """
+    Get the root directory for the hook's context system.
+    Uses the hook file's location to find the sibling 'context' folder.
+
+    Structure expected:
+        <hook_root>/
+            hooks/
+                load_context_system.py  (this file)
+            context/
+                CLAUDE.md
+    """
+    hook_dir = Path(__file__).resolve().parent  # hooks/
+    hook_root = hook_dir.parent  # personal-assistant/ (or whatever it's named)
+    return hook_root
 
 
-def _ensure_file(path: Path, default: str = "") -> None:
+def ensure_file(path: Path, default: str = "") -> None:
+    """Create file with default content if it doesn't exist."""
     path.parent.mkdir(parents=True, exist_ok=True)
     if not path.exists():
         path.write_text(default, encoding="utf-8")
 
 
-if __name__ == "__main__":
+def main() -> None:
+    # Parse hook input from stdin (required even if unused, to consume the input)
     try:
-        input_data: dict = json.load(sys.stdin)
-        session_id = input_data.get("session_id", "unknown_session")
-        input_prompt = input_data.get("prompt", "")
-        transcript_path = input_data.get("transcript_path", "")
+        json.load(sys.stdin)
     except json.JSONDecodeError as e:
         print(f"Error: Invalid JSON input: {e}", file=sys.stderr)
         sys.exit(1)
 
-    # Ensure the context file exists; create if missing, otherwise read
-    context_path = root / "personal-assistant" / "context" / "CLAUDE.md"
+    # Get the context file path relative to this hook's location
+    hook_root = get_hook_root()
+    context_path = hook_root / "context" / "CLAUDE.md"
+
+    # Read the context file, creating it if it doesn't exist
     try:
-        _ensure_file(context_path, "# Context\n")
+        ensure_file(context_path, "# Context\n\nAdd your context instructions here.\n")
         context = context_path.read_text(encoding="utf-8", errors="replace")
     except Exception as e:
         print(f"Warning: Unable to read context file: {e}", file=sys.stderr)
         context = ""
 
-    print(
-        json.dumps(
-            {
-                "hookSpecificOutput": {
-                    "hookEventName": "UserPromptSubmit",
-                    "additionalContext": context,
-                }
-            }
-        )
-    )
-
-    # Allow the prompt to proceed with the additional context
+    # Output the context to be injected into Claude's session
+    output = {
+        "hookSpecificOutput": {
+            "hookEventName": "UserPromptSubmit",
+            "additionalContext": context,
+        }
+    }
+    print(json.dumps(output))
     sys.exit(0)
+
+
+if __name__ == "__main__":
+    main()
