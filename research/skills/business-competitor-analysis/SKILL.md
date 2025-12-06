@@ -10,9 +10,11 @@ Perform data-grounded competitor analysis producing an executive-summary markdow
 ## Workflow Overview
 
 1. **Extract business information** from provided details or website
-2. **Identify top 5 competitors** via web search
-3. **Research each competitor** across key dimensions
-4. **Synthesize findings** into structured report with citations
+2. **Define target customer profile** (required)
+3. **Identify top 5 competitors** via web search
+4. **Research each competitor** across key dimensions
+5. **Identify market gaps and opportunities**
+6. **Synthesize findings** into structured report with citations
 
 ## Step 1: Extract Business Information
 
@@ -32,7 +34,45 @@ Perform data-grounded competitor analysis producing an executive-summary markdow
 - Pricing model (if discoverable)
 - Key value propositions
 
-## Step 2: Identify Top 5 Competitors
+## Step 2: Define Target Customer Profile
+
+**This step is required.** Understanding the target customer enables accurate assessment of direct vs. indirect competitors and market positioning.
+
+Research and document the target customer across these dimensions:
+
+### Firmographics
+- Company size (employees, revenue range)
+- Industry/vertical focus
+- Geographic markets served
+- Technology maturity level
+
+### Psychographics & Pain Points
+- Top 3-5 pain points the product addresses
+- Primary goals and desired outcomes
+- Current alternatives or workarounds
+- Decision-making criteria and priorities
+- Budgetary constraints
+
+### Behavioral Patterns
+- How customers currently solve this problem
+- Where they search for solutions
+- Typical buying process and timeline
+- Key stakeholders in purchase decision
+
+### Market Sizing (if discoverable)
+- Total addressable market (TAM) estimates
+- Serviceable addressable market (SAM)
+- Market growth trends and projections
+
+**Research approaches:**
+- Search "[industry] market size" and "[product category] target market"
+- Review the subject company's "customers" or "case studies" pages
+- Check industry reports, analyst research, market studies
+- Use the subject company's messaging to infer customer profile
+
+For detailed examples and frameworks, refer to `references/competitive-analysis-framework.md`.
+
+## Step 3: Identify Top 5 Competitors
 
 Run targeted searches to find direct competitors:
 
@@ -51,31 +91,57 @@ Select the top 5 most relevant direct competitors based on:
 - Comparable business model
 - Market presence and visibility in search results
 
-## Step 3: Research Each Competitor
+## Step 4: Research Each Competitor
 
 For each competitor, gather data across four dimensions:
 
-### 3a. Market Positioning & Messaging
+### 4a. Market Positioning & Messaging
 - Fetch competitor homepage and about page
 - Extract: tagline, value proposition, target audience messaging
 - Note: tone, positioning (premium/budget/mid-market), key claims
 
-### 3b. Pricing & Business Model
+### 4b. Pricing & Business Model
 - Search "[competitor] pricing" and fetch pricing pages
 - Document: pricing tiers, model (subscription/one-time/freemium), entry price point
 - If pricing not public, note this and search for any available information
 
-### 3c. Product/Feature Comparison
+### 4c. Product/Feature Comparison
 - Review product pages and feature lists
 - Identify: core features, unique capabilities, integrations, limitations
 - Note any recent product launches or announcements
 
-### 3d. Funding & Company Size
+### 4d. Funding & Company Size
 - Search "[competitor] funding" and "[competitor] company size"
 - Check for: Crunchbase mentions, LinkedIn company size, press releases
 - Document: funding rounds, total raised, employee count estimates, founding year
 
-## Step 4: Synthesize Report
+## Step 5: Identify Market Gaps & Opportunities
+
+After researching competitors, systematically identify gaps in the competitive landscape:
+
+### What to Look For
+
+**Underserved customer segments:**
+- Which customer types or use cases do competitors ignore or serve poorly?
+- Are there geographic, size, or industry segments with limited options?
+
+**Feature/capability gaps:**
+- What functionality is missing across all competitors?
+- What do customers request that no one provides well?
+- What emerging needs are competitors slow to address?
+
+**Positioning gaps:**
+- What market positions are unclaimed? (e.g., "affordable enterprise-grade", "developer-first", "compliance-focused")
+- Are there price points without strong offerings?
+- Are there business models (e.g., usage-based, freemium) competitors avoid?
+
+**Approach/philosophy gaps:**
+- Do all competitors share assumptions the subject company challenges?
+- Are there cultural or regional needs competitors overlook?
+
+Document 3-5 specific gaps with supporting evidence from competitor research.
+
+## Step 6: Synthesize Report
 
 Generate markdown report following the exact structure below.
 
@@ -96,6 +162,35 @@ Generate markdown report following the exact structure below.
 
 ---
 
+## Target Customer Profile
+
+### Primary Target Segment
+
+**Firmographics:**
+- Company size: [Employee count, revenue range]
+- Industry focus: [Primary industries/verticals]
+- Geographic markets: [Regions served]
+- Technology maturity: [Early adopter/mainstream/conservative]
+
+**Pain Points & Goals:**
+- [Pain point 1 with description] [Source N]
+- [Pain point 2 with description] [Source N]
+- [Pain point 3 with description] [Source N]
+- Current alternatives: [What customers use today without this product]
+- Decision criteria: [What matters most when evaluating solutions]
+
+**Behavioral Patterns:**
+- Current solution approach: [How they solve this problem today]
+- Search/discovery: [Where they look for solutions]
+- Buying process: [Typical purchase timeline and stakeholders]
+
+**Market Sizing (if discoverable):**
+- Total addressable market: [TAM estimate] [Source N]
+- Serviceable addressable market: [SAM for realistic target] [Source N]
+- Market growth: [YoY growth rate or projections] [Source N]
+
+---
+
 ## Competitive Matrix
 
 | Dimension | [Subject] | [Competitor 1] | [Competitor 2] | [Competitor 3] | [Competitor 4] | [Competitor 5] |
@@ -105,8 +200,28 @@ Generate markdown report following the exact structure below.
 | **Pricing Model** | [Model] | ... | ... | ... | ... | ... |
 | **Entry Price** | [$X/mo or N/A] | ... | ... | ... | ... | ... |
 | **Key Differentiator** | [1-liner] | ... | ... | ... | ... | ... |
+| **Primary Weakness vs [Subject]** | N/A | [Weakness] | [Weakness] | [Weakness] | [Weakness] | [Weakness] |
 | **Funding Stage** | [Stage/Amount] | ... | ... | ... | ... | ... |
 | **Est. Company Size** | [Employees] | ... | ... | ... | ... | ... |
+
+---
+
+## Market Gaps & Opportunities
+
+### Underserved Customer Segments
+- **[Gap 1]:** [Description of customer segment or use case competitors miss] [Source N]
+- **[Gap 2]:** [Description] [Source N]
+
+### Feature/Capability Gaps
+- **[Gap 1]:** [Functionality that no competitor provides well] [Source N]
+- **[Gap 2]:** [Description] [Source N]
+
+### Positioning/Business Model Gaps
+- **[Gap 1]:** [Market position or business model no one claims] [Source N]
+- **[Gap 2]:** [Description] [Source N]
+
+### Strategic Implications
+[1-2 sentences on how these gaps create opportunity for the subject company or reveal market evolution trends] [Source N]
 
 ---
 
@@ -137,18 +252,54 @@ Generate markdown report following the exact structure below.
 ### Strengths
 - [Strength 1 with supporting evidence] [Source N]
 - [Strength 2 with supporting evidence] [Source N]
+- [Strength 3 with supporting evidence] [Source N]
 
 ### Weaknesses
 - [Weakness 1 based on competitive gaps] [Source N]
 - [Weakness 2 based on competitive gaps] [Source N]
+- [Weakness 3 based on competitive gaps] [Source N]
 
 ### Opportunities
 - [Opportunity 1 based on market/competitor analysis] [Source N]
 - [Opportunity 2 based on market/competitor analysis] [Source N]
+- [Opportunity 3 based on market/competitor analysis] [Source N]
 
-### Threats
-- [Threat 1 from competitive landscape] [Source N]
-- [Threat 2 from competitive landscape] [Source N]
+### Competitive Moats & Defensibility
+
+Identify what makes the subject company's competitive advantages sustainable and difficult to replicate:
+
+- **[Moat Type 1]:** [Description of the moat] — [Why it's defensible: time, cost, network effects, etc.] [Source N]
+- **[Moat Type 2]:** [Description] — [Why defensible] [Source N]
+
+Common moat types: network effects, data moats, brand moats, regulatory moats, cost advantages, integration depth, specialization/focus, cultural/geographic expertise, switching costs.
+
+---
+
+## Competitive Threats & Mitigation
+
+### Near-Term Threats (0-12 months)
+
+#### [Threat 1 Title]
+- **Description:** [What could happen]
+- **Likelihood:** [High/Medium/Low] — [Brief justification]
+- **Impact:** [High/Medium/Low] — [Potential damage if occurs]
+- **Mitigation:** [Specific actions to reduce threat] [Source N]
+
+#### [Threat 2 Title]
+- **Description:** [What could happen]
+- **Likelihood:** [High/Medium/Low] — [Brief justification]
+- **Impact:** [High/Medium/Low] — [Potential damage if occurs]
+- **Mitigation:** [Specific actions to reduce threat] [Source N]
+
+### Medium to Long-Term Threats (12+ months)
+
+#### [Threat 3 Title]
+- **Description:** [What could happen]
+- **Likelihood:** [High/Medium/Low] — [Brief justification]
+- **Impact:** [High/Medium/Low] — [Potential damage if occurs]
+- **Mitigation:** [Specific actions to reduce threat] [Source N]
+
+*Note: Timeframes and likelihood estimates are flexible. Adapt based on industry velocity and market dynamics.*
 
 ---
 
@@ -183,10 +334,14 @@ Based on this analysis, consider:
 
 Before finalizing report, verify:
 
+- [ ] Target Customer Profile completed with firmographics, pain points, and behavioral patterns
 - [ ] All 5 competitors researched across all 4 dimensions
 - [ ] Every factual claim has inline citation
 - [ ] Competitive matrix is complete with no empty cells (use "N/A" or "Not disclosed" if needed)
+- [ ] Market Gaps section identifies at least 3 specific gaps with evidence
 - [ ] SWOT items are specific and evidence-based, not generic
+- [ ] Competitive Moats explain why advantages are defensible, not just listing strengths
+- [ ] Threat analysis includes likelihood/impact ratings and mitigation strategies for each threat
 - [ ] Recommendations are actionable and tied to specific findings
 - [ ] Sources section includes all referenced URLs
 
