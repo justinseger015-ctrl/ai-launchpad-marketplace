@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-UserPromptSubmit hook to load context system into Claude's context.
+UserPromptSubmit hook to load initial context into Claude's context window. Context is loaded as a system reminder (see claude-trace).
 """
 
 import json
@@ -60,6 +60,8 @@ def main() -> None:
         }
     }
     print(json.dumps(output))
+
+    # We must exit with code 0 for Claude to see the STDOUT
     sys.exit(0)
 
 
