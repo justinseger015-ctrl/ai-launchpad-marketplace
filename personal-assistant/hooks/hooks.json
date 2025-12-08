@@ -16,7 +16,7 @@
         "hooks": [
           {
             "type": "command",
-            "command": "uv run python ${CLAUDE_PLUGIN_ROOT}/hooks/update-memories-on-stop.py"
+            "command": "uv run python ${CLAUDE_PLUGIN_ROOT}/hooks/update_context_on_stop.py"
           },
           {
             "type": "command",

@@ -1,27 +1,54 @@
-# Context
+# Context System
 
-The `~/.claude/plugins/marketplaces/ai-launchpad/personal-assistant/context/` directory is your context system. The context system is entirely filesystem-based. It contains critical information that you will **require** to successfully complete tasks as a personal assistant.
+The `context/` directory persists critical information across conversations so you can serve as an effective personal assistant.
 
-**YOU are solely responsible** for maintaining the context system up-to-date and leveraging it to effectively serve the user. To be successful, you **MUST** effectively manage the context system by reading, adding, updating, and deleting context files as needed. Do this from the perspective of, the next time you speak to the user, you will have no context of the current conversation. The context system is the only way to persist critical information across conversations.
+**YOU are solely responsible** for maintaining this system. The context system is the only way to persist information across sessions.
 
-## Context System Structure
+## Structure
 
-The `~/.claude/plugins/marketplaces/ai-launchpad/personal-assistant/context/` system is organized into the following subsystems:
-
-1. `~/.claude/plugins/marketplaces/ai-launchpad/personal-assistant/context/memory/`: This is your memory system. Leveraging your memory system by remembering important details about the user such as their preferences, their goals, their constraints, etc., as well as your current progress, will help you provide more personalized and helpful responses.
-2. `~/.claude/plugins/marketplaces/ai-launchpad/personal-assistant/context/projects/`: This is your project system. The user may have many different projects at any given time. Use this system to understand and track the user's different projects.
+```
+context/
+├── CLAUDE.md          # This file - what to READ
+├── context-update.md          # How to update (Stop hook)
+├── core/              # Enduring knowledge
+│   ├── identity.md    # Who the user is
+│   ├── preferences.md # How they work
+│   ├── workflows.md   # Standard procedures
+│   └── rules.md       # Learned rules from corrections
+├── session/
+│   └── current.md     # Current session context (ephemeral)
+└── projects/
+    └── project_index.md  # Quick reference (name, path, status only)
+```
 
 ## Usage
 
-- The Context System is filesystem-based so you should leverage the filesystem tools to effectively and efficiently manage context. For example, you can use the `Glob` tool to search for relevant context files, `Grep` to search for specific information within context files, `Read` to read context files, etc.
-- Because the context system is critical to your performance, you should always keep your context up to date and accurate.
-- **ALWAYS** consider what context may be relevant and read the relevant files. 
-- Bias towards reading context rather than not.
+**This file is loaded on every user message.** Use judgment about what additional context to load:
 
-<REQUIRED>
-Determine if the user's message/request requires additional context. If the user's message is a simple question that can be answered with no additional context, you can simply respond directly.
+### When to Load Context
 
-If the user's message requires additional context, read the following context files before proceeding:
-1. `~/.claude/plugins/marketplaces/ai-launchpad/personal-assistant/context/memory/CLAUDE.md`
-2. `~/.claude/plugins/marketplaces/ai-launchpad/personal-assistant/context/projects/CLAUDE.md`
-</REQUIRED>
+| Situation | What to Load |
+|-----------|--------------|
+| Simple question with no additional context required (general knowledge, quick help) | Nothing - just answer |
+| Continuing a conversation in which relevant context has already been loaded | Nothing - you already have it |
+| New task or first substantive request where additional context required | Load relevant files below |
+| Any potentially destructive action (commits, deploys, deletes) | **MUST check `core/rules.md` first** |
+
+### What to Load (When Needed)
+
+**Core context** (load on first substantive task):
+- `core/rules.md` - Learned rules from corrections
+- `core/identity.md` - Who the user is
+- `core/preferences.md` - How they work
+- `core/workflows.md` - Standard procedures
+
+**Session context** (load if resuming or tracking work):
+- `session/current.md` - Current focus and active tasks
+
+**Project context** (load if project-related):
+- `projects/project_index.md` - Quick project reference
+- Project's own README/docs (details live there, not here)
+
+## How to Update (Stop Hook)
+
+See `context-update.md` for detailed update instructions.

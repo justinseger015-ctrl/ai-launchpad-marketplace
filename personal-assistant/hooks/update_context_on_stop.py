@@ -19,17 +19,17 @@ def get_hook_root() -> Path:
     return hook_root
 
 
-def get_memory_update_instructions(hook_root: Path) -> str:
-    """Generate memory update instructions with correct paths."""
+def get_context_update_instructions(hook_root: Path) -> str:
+    """Generate context update instructions with correct paths."""
     context_dir = hook_root / "context"
 
-    return f"""Before finishing, update the memory and context systems:
+    return f"""Before finishing, update the context system:
 
-If you haven't already, read `{context_dir}/memory/CLAUDE.md` to understand the requirements for a memory update.
+If you haven't already, read `{context_dir}/context-update.md` to understand the requirements for a context update.
 
-If a memory update is necessary, complete the update according to the instructions in `{context_dir}/memory/CLAUDE.md`.
+If a context update is necessary, complete the update according to the instructions in `{context_dir}/context-update.md`.
 
-After completing the memory update or if no update is necessary, you may finish your response."""
+After completing the context update or if no update is necessary, you may finish your response."""
 
 
 def main() -> None:
@@ -44,14 +44,14 @@ def main() -> None:
     stop_hook_active = hook_input.get("stop_hook_active", False)
 
     if stop_hook_active:
-        # Let Claude stop - memory update already happened this turn
+        # Let Claude stop - context update already happened this turn
         sys.exit(0)
 
-    # Block Claude and instruct it to update memories
+    # Block Claude and instruct it to update context
     hook_root = get_hook_root()
     output = {
         "decision": "block",
-        "reason": get_memory_update_instructions(hook_root)
+        "reason": get_context_update_instructions(hook_root)
     }
     print(json.dumps(output))
     sys.exit(0)

@@ -1,84 +1,32 @@
 ---
 name: Project Index
-description: This is a living document where you should maintain an index of all of the user's projects.
+description: Quick reference for user's projects. **Details live in project repos** (README, docs/), not here.
+update_policy: Keep entries minimal (name, path, status, key notes only). Move completed projects to Archive section. Don't duplicate information that's in project documentation - no permission needed
 ---
 
-# Usage
+## Active Projects
 
-The project index is meant to be a quick reference for you to understand the user's projects.
+| Project | Path | Status | Key Notes |
+|---------|------|--------|-----------|
+| AI Launchpad | `/Users/kennethliao/projects/ai-launchpad-marketplace` | Active | Skills/plugins for Claude Code |
+| EQL Ivy | `/Users/kennethliao/projects/eql-ivy` | Production | Vietnamese AI sales assistant (Supabase + Render) |
+| YouTube | `/Users/kennethliao/projects/youtube` | Active | See `episode_files/` for current work |
 
-- All projects should be written in markdown format in the sections below. 
-- If a project is no longer relevant, you can delete it. 
-- If a project is outdated or needs to be updated, you can modify it.
-- Add new projects as you work on them with the user.
+### Quick Notes
 
-## Index Guidelines ( 🚨 **MUST ALWAYS** follow 🚨 )
+**AI Launchpad Marketplace**
+- Includes: business-competitor-analysis skill, personal-assistant plugin, yt-content-strategist plugin
 
-- Include the project folder absolute path
-- Include the project description
-- Include the project status
+**EQL Ivy**
+- Full analysis: `docs/COMPETITIVE_ANALYSIS.md`
+- Decision (Dec 2025): Staying with Supabase for 6-18 month horizon
 
-<REQUIRED>
-You may ONLY EDIT BELOW THE --- LINE.
-</REQUIRED>
+**YouTube**
+- Current episode: 20 (Context Engineering) - ready for production
+- Episode files: `episode_files/[N]_[topic]/`
 
 ---
 
-# Project Index
+## Archived Projects
 
-## AI Launchpad Marketplace
-
-**Path:** `/Users/kennethliao/projects/ai-launchpad-marketplace`
-
-**Description:** Marketplace of skills and plugins for Claude Code/personal assistant. Includes research skills (business-competitor-analysis, plugin features analysis) and plugins (yt-content-strategist, personal-assistant).
-
-**Status:** Active - Iterating on skill quality and capabilities
-
-**Recent Work:**
-- Analyzed EQL Ivy competitive analysis report to improve business-competitor-analysis skill
-- Identified 5 major improvements: Target Customer Profile, Market Gaps, Structured Threat Analysis, Competitive Moats, Enhanced Differentiation Matrix
-
-## EQL Ivy
-
-**Path:** `/Users/kennethliao/projects/eql-ivy`
-
-**Description:** AI-powered sales assistant for EQL Apparel's Instagram/Facebook Messenger conversations in Vietnamese. Multi-tenant SaaS platform with real-time agent collaboration, LangGraph-based AI workflows, and enterprise-grade security.
-
-**Status:** Production - Live deployment with competitive analysis completed
-
-**Tech Stack:**
-- Backend: FastAPI + Python 3.13 + LangGraph + OpenAI GPT-4
-- Frontend: Next.js 15 + shadcn/ui + TypeScript
-- Database: Supabase PostgreSQL with real-time subscriptions
-- Deployment: Render (backend) + Vercel (frontend)
-
-**Recent Work:**
-- Comprehensive competitive analysis completed (Dec 6, 2025)
-- Identified 7 competitive advantages and strategic positioning
-- Pricing recommendations: $49-499/mo (conversation-based) or $99-299/mo (seat-based)
-- 3-phase GTM strategy developed
-
-**Key Differentiators:**
-- Vietnamese language specialization (underserved market)
-- Real-time agent collaboration (WebSocket-based)
-- Multi-tenant SaaS architecture with Row Level Security
-- E-commerce/apparel vertical focus
-
-**Documentation:**
-- Main: `/Users/kennethliao/projects/eql-ivy/README.md`
-- Competitive Analysis: `/Users/kennethliao/projects/eql-ivy/docs/COMPETITIVE_ANALYSIS.md`
-- Production Setup: `/Users/kennethliao/projects/eql-ivy/docs/PRODUCTION.md`
-
-## YouTube Channel
-
-**Path:** `/Users/kennethliao/projects/youtube/episode_files/`
-
-**Description:** Kenny's YouTube channel (@KennethLiao) focused on AI/Claude Code tutorials for working professionals.
-
-**Status:** Active - Episode 20 ready for production
-
-**Recent Episodes:**
-- Episode 20: Claude Code Context Engineering (planning complete, thumbnails finalized)
-- Episode 19: Tools for Claude Code (11.2K views)
-- Episode 17: Personal Assistant (16.8K views)
-- Episode 16: Claude Agent Skills (23.5K views - top performer)
+*Move completed projects here with completion date*
