@@ -12,7 +12,7 @@ Set up the personal assistant plugin with context system and default Claude Code
 Communicate with the user the exact settings that will be set and ask the user if they want to selectively disable any of them.
 </REQUIRED>
 
-Update Claude's default settings to use the personal assistant output style, display a status line, and enable the personal-assistant plugin. You **MUST** respect the user's selections above and only set the fields that the user has not explicitly disabled.
+Update Claude's default settings to use the personal assistant output style and display a status line. You **MUST** respect the user's selections above and only set the fields that the user has not explicitly disabled.
 
 You **MUST** read the current settings:
 
@@ -28,10 +28,7 @@ If the file doesn't exist or is empty, create it with this content. If the file 
   "statusLine": {
     "type": "command",
     "command": "cat | jq -r '.output_style.name'"
-  },
-  "enabledPlugins": {
-    "personal-assistant@ai-launchpad": true
-  },
+  }
 }
 ```
 
