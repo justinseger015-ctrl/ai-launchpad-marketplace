@@ -4,15 +4,15 @@ description: Set up the personal assistant plugin. Run this once after installin
 
 # Personal Assistant Setup
 
-Set up the personal assistant plugin with context system and default Claude Code settings.
+Set up the Personal Assistant plugin with context system and default Claude Code settings.
 
 ## Step 1: Set Default Settings
 
 <REQUIRED>
-Communicate with the user the exact settings that will be set and ask the user if they want to selectively disable any of them.
+Communicate with the user the exact settings that will be set and ask the user if they want to selectively disable any of them. The Personal Assistant output style will turn Claude Code into a personal assistant with deep contextual knowledge and proactive behavior to help the user achieve their goals.
 </REQUIRED>
 
-Update Claude's default settings to use the personal assistant output style and display a status line. You **MUST** respect the user's selections above and only set the fields that the user has not explicitly disabled.
+Update Claude's default settings to use the Personal Assistant output style and display a status line. You **MUST** respect the user's selections above and only set the fields that the user has not explicitly disabled.
 
 You **MUST** read the current settings:
 
