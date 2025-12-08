@@ -20,13 +20,14 @@ def get_context_update_instructions() -> str:
     if not CONTEXT_DIR.exists():
         return """Context system not initialized. Run /setup-context-system first."""
 
-    return f"""Before finishing, update the context system:
-
+    return f"""<system_reminder>
 If you haven't already, read `{CONTEXT_DIR}/context-update.md` to understand the requirements for a context update.
 
 If a context update is necessary, complete the update according to the instructions in `{CONTEXT_DIR}/context-update.md`.
 
-After completing the context update or if no update is necessary, you may finish your response."""
+After completing the context update or if no update is necessary, you may finish your response.
+</system_reminder>
+"""
 
 
 def main() -> None:

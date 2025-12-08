@@ -27,11 +27,12 @@ def get_context_or_setup_instructions() -> str:
 
 The personal assistant context system has not been set up yet.
 
-1. Run the `/setup-context-system` command to initialize your context directory at:
+1. Ask the user if they want to set up the context system to persist context across conversations.
+2. **ONLY** if you receive an explicit confirmation, run the `/setup-context-system` command to initialize your context directory at:
 `{CONTEXT_DIR}`
-2. Validate that the context files were created correctly.
+3. Validate that the context files were created correctly.
 
-This only needs to be done once. Your context will persist across plugin updates. You can then continue.
+This only needs to be done once. Your context will persist across plugin updates. You can then continue addressing the user's message.
 """
 
     try:
