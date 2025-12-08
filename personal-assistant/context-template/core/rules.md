@@ -10,24 +10,9 @@ rule_format:
 - ✅ ALWAYS [action] [context if needed]
 ---
 
-## Git & Version Control
+## Example Section: [Category]
 
-- ❌ NEVER commit without explicit approval or request
-- ❌ NEVER rebase without permission
-- ✅ ALWAYS ask before any destructive git operation
-
-## Code Changes
-
-- ❌ NEVER install dependencies without asking (can break environments)
-- ✅ ALWAYS run existing tests after making changes
-
-## Communication
-
-- ❌ DON'T assume what user wants - ask if unclear
-- ❌ DON'T create documentation files unless explicitly requested
-- ✅ DO ask clarifying questions for ambiguous requests
-
-## Project-Specific Rules
-
-*Add project-specific rules here as learned*
+*Rules are learned from corrections. Use the format from the frontmatter:*
+- ❌ NEVER [action] [context] - [reason]
+- ✅ ALWAYS [action] [context]
 
