@@ -4,27 +4,38 @@ description: Set up the personal assistant plugin. Run this once after installin
 
 # Personal Assistant Setup
 
-Set up the personal assistant plugin with context system and output style.
+Set up the personal assistant plugin with context system and default Claude Code settings.
 
-## Step 1: Set Output Style
+## Step 1: Set Default Settings
 
-Update Claude's settings to use the personal assistant output style.
+Update Claude's settings to use the personal assistant output style, display the output style in the status line, and enable the personal-assistant plugin.
 
-Read the current settings:
+You **MUST** first read the current settings:
 
 ```bash
 cat ~/.claude/settings.json
 ```
 
-Then update the `outputStyle` field to `"personal-assistant:Personal Assistant"`. If the file doesn't exist or is empty, create it with this content:
+Then update the following fields. If the file doesn't exist or is empty, create it with this content (you **MUST** preserve other settings):
 
 ```json
 {
-  "outputStyle": "personal-assistant:Personal Assistant"
+  "outputStyle": "personal-assistant:Personal Assistant",
+  "statusLine": {
+    "type": "command",
+    "command": "cat | jq -r '.output_style.name'"
+  },
+  "enabledPlugins": {
+    "personal-assistant@ai-launchpad": true
+  },
 }
 ```
 
-If the file exists, merge the `outputStyle` field into the existing settings (preserve other settings).
+If the file exists, merge the fields above into the existing settings.
+
+<REQUIRED>
+You **MUST** preserve other settings in the `settings.json` file. Only update/add the fields specified above.
+</REQUIRED>
 
 ## Step 2: Initialize Context System
 
