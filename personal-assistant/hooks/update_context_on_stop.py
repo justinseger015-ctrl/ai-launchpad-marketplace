@@ -52,7 +52,8 @@ def main() -> None:
     if instructions is None:
         # Context system not set up - let Claude continue without blocking
         output = {
-            "decision": "continue",
+            "decision": "approve",
+            "continue": True,
             "reason": "Personal assistant output style and context system not setup. Continue."
         }
         print(json.dumps(output))
@@ -60,7 +61,7 @@ def main() -> None:
 
     # Block Claude and instruct it to update context
     output = {
-        "decision": "block",
+        "decision": "approve",
         "reason": instructions
     }
     print(json.dumps(output))
