@@ -25,9 +25,9 @@ def get_context_or_setup_instructions() -> str:
     if not context_path.exists():
         return f"""# Personal Assistant Not Set Up
 
-The personal assistant plugin has not been set up yet.
+The user has installed the personal assistant plugin, but it has not been set up yet.
 
-1. Ask the user if they want to set up the personal assistant (context system + output style).
+1. <REQUIRED>You **MUST** ask the user if they want to set up the personal assistant (context system + output style) now.</REQUIRED>
 2. **ONLY** if you receive an explicit confirmation, run the `/personal-assistant:setup` command to:
    - Set the output style to personal-assistant
    - Initialize the context directory at `{CONTEXT_DIR}`
