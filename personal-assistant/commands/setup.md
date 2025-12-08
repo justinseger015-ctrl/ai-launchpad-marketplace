@@ -80,7 +80,9 @@ Your context is stored **outside** the plugin directory so that:
 ## After Setup
 
 Once initialized:
-- Output style is active (restart Claude Code to apply)
 - Context is loaded on every user message
 - Context updates are prompted after each response
-- Your personalized data stays safe from plugin updates
+
+<REQUIRED>
+The output style is not active until the user restarts Claude Code. Prompt the user to restart Claude Code now to activate the output style. Otherwise, if they decide to continue, the context system will work correctly but the output style will not be active.
+</REQUIRED>
