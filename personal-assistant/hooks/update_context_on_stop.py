@@ -18,7 +18,7 @@ def get_context_update_instructions() -> str:
     """Generate context update instructions with correct paths."""
     # Check if context system is initialized
     if not CONTEXT_DIR.exists():
-        return """Context system not initialized. Run /personal-assistant:setup first."""
+        return """Personal assistant and context system not initialized. Wait for user to confirm setting up with /personal-assistant:setup first. If user does not want to proceed with setup. Ignore this message and continue helping the user."""
 
     return f"""<system_reminder>
 If you haven't already, read `{CONTEXT_DIR}/context-update.md` to understand the requirements for a context update.
