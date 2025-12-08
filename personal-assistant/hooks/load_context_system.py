@@ -27,7 +27,9 @@ def get_context_or_setup_instructions() -> str:
 
 The user has installed the personal assistant plugin, but it has not been set up yet.
 
-1. <REQUIRED>You **MUST** ask the user if they want to set up the personal assistant (context system + output style) now.</REQUIRED>. If the user does **NOT** want to set up the personal assistant, you can ignore this message for the rest of this conversation and continue helping the user.
+1. <REQUIRED>You **MUST** ask the user if they want to set up the personal assistant now. This will add default Claude Code settings to `~/.claude/settings.json` and initialize the context directory at `{CONTEXT_DIR}`.</REQUIRED>. 
+
+If the user does **NOT** want to set up the personal assistant, you can ignore this message for the rest of this conversation and continue helping the user.
 2. **ONLY** if you receive an explicit confirmation, run the `/personal-assistant:setup` command to:
    - Set the output style to personal-assistant
    - Initialize the context directory at `{CONTEXT_DIR}`

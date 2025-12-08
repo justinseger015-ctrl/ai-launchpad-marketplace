@@ -8,15 +8,19 @@ Set up the personal assistant plugin with context system and default Claude Code
 
 ## Step 1: Set Default Settings
 
-Update Claude's settings to use the personal assistant output style, display the output style in the status line, and enable the personal-assistant plugin.
+<REQUIRED>
+Communicate with the user the exact settings that will be set and ask the user if they want to selectively disable any of them.
+</REQUIRED>
 
-You **MUST** first read the current settings:
+Update Claude's default settings to use the personal assistant output style, display a status line, and enable the personal-assistant plugin. You **MUST** respect the user's selections above and only set the fields that the user has not explicitly disabled.
+
+You **MUST** read the current settings:
 
 ```bash
 cat ~/.claude/settings.json
 ```
 
-Then update the following fields. If the file doesn't exist or is empty, create it with this content (you **MUST** preserve other settings):
+If the file doesn't exist or is empty, create it with this content. If the file exists, merge the fields below into the existing settings (you **MUST** preserve other settings).
 
 ```json
 {
