@@ -26,7 +26,7 @@ If you haven't already, read `{CONTEXT_DIR}/context-update.md` to understand the
 
 If a context update is necessary, complete the update according to the instructions in `{CONTEXT_DIR}/context-update.md`.
 
-After completing the context update or if no update is necessary, you may finish your response.
+After completing the context update or if no update is necessary, give a very concise bullet point summary of the update.
 </system_reminder>
 """
 
