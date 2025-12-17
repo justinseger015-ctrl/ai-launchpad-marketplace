@@ -6,38 +6,53 @@ update_policy: Keep entries minimal. Location tells Elle where to find details. 
 
 ## Active Projects
 
+<guide>All active projects — work, personal, life. Location tells Elle where to find details.</guide>
+
+<format>
 | Project | Location | Status | Key Notes |
 |---------|----------|--------|-----------|
-| *Example: Work App* | `/path/to/repo` | Active | *Brief description* |
-| *Example: Vacation* | `Google Drive > Travel > Hawaii 2025` | Planning | *Trip dates, key decisions* |
-| *Example: Learning* | `Notion: Course Notes` | In Progress | *What you're learning* |
-| *Example: Home* | *(no fixed location)* | Ongoing | *Home improvement project* |
+</format>
 
-**Location examples:**
+| Project | Location | Status | Key Notes |
+|---------|----------|--------|-----------|
+
+<guide>
+Location examples:
 - Local folder: `/Users/you/projects/my-app`
 - Google Drive: `Google Drive > Folder > Subfolder`
 - Notion: `Notion: Page Name`
 - Other tools: `Figma: Design File` / `Linear: Project Board`
 - No location: *(no fixed location)* or *(mental/scattered)*
+</guide>
 
 ### Quick Notes
 
-*Cross-project notes, connections between projects, upcoming deadlines*
+<guide>Cross-project notes, connections between projects, context that doesn't fit the table</guide>
 
 ---
 
 ## Upcoming Milestones
 
+<guide>Key dates/deadlines across projects</guide>
+
+<format>
 | Date | Project | Milestone |
 |------|---------|-----------|
-| *Example: Jan 15* | *Work App* | *Beta launch* |
+</format>
+
+| Date | Project | Milestone |
+|------|---------|-----------|
 
 ---
 
 ## Archived Projects
 
-*Move completed projects here with completion date*
+<guide>Completed projects with outcome/learnings</guide>
+
+<format>
+| Project | Completed | Outcome |
+|---------|-----------|---------|
+</format>
 
 | Project | Completed | Outcome |
 |---------|-----------|---------|
-| *Example* | *Dec 2024* | *Brief result/learnings* |

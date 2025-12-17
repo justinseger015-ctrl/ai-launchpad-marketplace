@@ -7,82 +7,82 @@ update_policy: Update when a workflow is learned or changed. Add new categories 
 ## Daily Routines
 
 ### Morning Routine
-*How they start the day*
+<guide>How they start the day</guide>
 
 ### End of Day
-*How they wrap up work/day*
+<guide>How they wrap up work/day</guide>
 
 ## Weekly Rhythms
 
 ### Weekly Planning
-*How/when they plan the week*
+<guide>How/when they plan the week</guide>
 
 ### Weekly Review
-*How they reflect on the week*
+<guide>How they reflect on the week</guide>
 
 ## Work Workflows
 
 ### Project Kickoff
-*How they start new projects*
+<guide>How they start new projects</guide>
 
 ### Deep Work
-*How they structure focused work time*
+<guide>How they structure focused work time</guide>
 
 ### Meetings & Communication
-*How they handle meetings, emails, messages*
+<guide>How they handle meetings, emails, messages</guide>
 
 ## Development Workflows
 
-*If applicable — coding, deployment, review processes*
+<guide>If applicable — coding, deployment, review processes</guide>
 
 ### Code Review
-*Process for reviewing code*
+<guide>Process for reviewing code</guide>
 
 ### Deployment
-*How they ship changes*
+<guide>How they ship changes</guide>
 
 ### Debugging
-*Approach to troubleshooting*
+<guide>Approach to troubleshooting</guide>
 
 ## Content & Creative
 
-*If applicable — writing, video, design processes*
+<guide>If applicable — writing, video, design processes</guide>
 
 ### Content Creation
-*Steps for creating content*
+<guide>Steps for creating content</guide>
 
 ### Publishing
-*How they publish/ship creative work*
+<guide>How they publish/ship creative work</guide>
 
 ## Personal Management
 
 ### Task Management
-*How they track and manage tasks*
+<guide>How they track and manage tasks</guide>
 
 ### Email/Inbox
-*How they process communications*
+<guide>How they process communications</guide>
 
 ### File Organization
-*How they organize digital files*
+<guide>How they organize digital files</guide>
 
 ## Life Admin
 
 ### Finances
-*How they manage money, bills, budgeting*
+<guide>How they manage money, bills, budgeting</guide>
 
 ### Health Management
-*How they track health, appointments, medications*
+<guide>How they track health, appointments, medications</guide>
 
 ### Travel Planning
-*How they plan and book travel*
+<guide>How they plan and book travel</guide>
 
 ## Social & Relationships
 
 ### Staying in Touch
-*How they maintain relationships*
+<guide>How they maintain relationships</guide>
 
 ### Gift Giving
-*How they handle birthdays, holidays*
+<guide>How they handle birthdays, holidays</guide>
 
 ### Event Planning
-*How they plan gatherings*
+<guide>How they plan gatherings</guide>

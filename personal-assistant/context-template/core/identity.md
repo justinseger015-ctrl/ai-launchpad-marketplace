@@ -6,42 +6,44 @@ update_policy: Update autonomously when new information is shared. Add sections 
 
 ## Basic Info
 
-- **Name**: *What they prefer to be called*
-- **Location**: *Where they live/work*
-- **Time Zone**: *For scheduling awareness*
+<guide>Basic identifying information</guide>
+
+- **Name**:
+- **Location**:
+- **Time Zone**:
 
 ## Personal Life
 
-*Family, living situation, pets, important life circumstances*
+<guide>Family, living situation, pets, important life circumstances</guide>
 
 ## Professional
 
-*Role, company/industry, career stage, what their work involves*
+<guide>Role, company/industry, career stage, what their work involves</guide>
 
 ## Goals & Aspirations
 
 ### This Year
-*What they're trying to achieve in the near term*
+<guide>Near-term goals they're trying to achieve this year</guide>
 
 ### Long-Term
-*Bigger dreams, where they want to be in 5+ years*
+<guide>Bigger dreams — where they want to be in 5+ years</guide>
 
 ## Current Challenges
 
-*What's hard right now — obstacles, frustrations, pain points Elle should be aware of*
+<guide>What's hard right now — obstacles, frustrations, pain points Elle should be aware of</guide>
 
 ## Values & Principles
 
-*What matters to them — guides decision-making and recommendations*
+<guide>What matters to them — guides decision-making and recommendations</guide>
 
 ## Health & Wellness
 
-*Relevant health context, fitness goals, energy patterns, any conditions that affect daily life*
+<guide>Relevant health context, fitness goals, energy patterns, any conditions that affect daily life</guide>
 
 ## Interests & Hobbies
 
-*What they enjoy outside of work*
+<guide>What they enjoy outside of work</guide>
 
 ## Communication Style
 
-*How they prefer to receive information and interact*
+<guide>How they prefer to receive information and interact</guide>

@@ -7,71 +7,59 @@ update_policy: When a new preference is stated, REPLACE the old one (don't accum
 ## Communication
 
 ### Information Style
-*How they like to receive information*
-- Detail level: *Concise bullets vs. thorough explanations*
-- Format: *Lists, prose, tables, visual*
+<guide>How they like to receive information — detail level (concise vs. thorough), format (lists, prose, tables)</guide>
 
 ### Decision Support
-*How they want help making decisions*
-- *Options to choose from vs. direct recommendations*
-- *Pros/cons analysis vs. "just tell me what to do"*
+<guide>How they want help making decisions — options vs. direct recommendations, pros/cons vs. "just tell me"</guide>
 
 ### Tone
-*How they want Elle to communicate*
-- *Formal vs. casual*
-- *Encouraging vs. matter-of-fact*
+<guide>How they want Elle to communicate — formal vs. casual, encouraging vs. matter-of-fact</guide>
 
 ## Working Style
 
 ### Productivity Patterns
-*When and how they work best*
-- Peak hours: *Morning, afternoon, evening*
-- Work style: *Deep focus blocks vs. task switching*
-- Planning: *Structured planner vs. flexible/reactive*
+<guide>When and how they work best — peak hours, deep focus vs. task switching, structured vs. flexible</guide>
 
 ### Task Approach
-*How they tackle work*
-- *Dive in vs. plan first*
-- *Perfectionist vs. "done is better than perfect"*
-- *Solo vs. collaborative*
+<guide>How they tackle work — dive in vs. plan first, perfectionist vs. "done is better than perfect"</guide>
 
 ### Procrastination Triggers
-*What tends to block them — helps Elle nudge appropriately*
+<guide>What tends to block them — helps Elle nudge appropriately</guide>
 
 ## Tools & Systems
 
 ### Productivity Tools
-*Apps, systems, workflows they rely on*
+<guide>Apps, systems, workflows they rely on</guide>
 
 ### Development Tools
-*If applicable: editors, languages, frameworks, package managers*
+<guide>If applicable: editors, languages, frameworks, package managers</guide>
 
 ### Note-Taking & Organization
-*How they capture and organize information*
+<guide>How they capture and organize information</guide>
 
 ## Decision-Making
 
 ### Risk Tolerance
-*Conservative vs. bold in recommendations*
+<guide>Conservative vs. bold in recommendations</guide>
 
 ### Information Needs
-*Data-driven vs. intuition-trusting*
+<guide>Data-driven vs. intuition-trusting</guide>
 
 ### Speed vs. Thoroughness
-*Quick decisions vs. careful analysis*
+<guide>Quick decisions vs. careful analysis</guide>
 
 ## Scheduling & Time
 
 ### Calendar Preferences
-*Buffer time, meeting density, protected time*
+<guide>Buffer time, meeting density, protected time</guide>
 
 ### Reminder Style
-*How and when to prompt about upcoming things*
+<guide>How and when to prompt about upcoming things</guide>
 
 ## Boundaries
 
 ### Topics to Avoid
-*Anything they don't want Elle involved in*
+<guide>Anything they don't want Elle involved in</guide>
 
 ### Autonomy Level
-*How much Elle should do independently vs. ask first*
+<guide>How much Elle should do independently vs. ask first</guide>

@@ -6,55 +6,48 @@ update_policy: Add people as they're mentioned. Update context as learned. No pe
 
 ## Family
 
-*Immediate family and close relatives*
+<guide>Immediate family and close relatives</guide>
 
-### Template Entry
-- **Name**:
+<format>
+### [Name]
 - **Relationship**:
-- **Context**: *What Elle should know — occupation, shared history, current situation*
-- **Important Dates**: *Birthday, anniversary*
-- **Notes**: *Communication preferences, gift ideas, things to remember*
+- **Context**: What Elle should know — occupation, shared history, current situation
+- **Important Dates**: Birthday, anniversary
+- **Notes**: Communication preferences, gift ideas, things to remember
+</format>
 
 ## Partner/Spouse
 
-*If applicable*
-
-- **Name**:
-- **Context**:
-- **Important Dates**:
-- **Shared Projects/Goals**:
+<guide>If applicable — the user's significant other</guide>
 
 ## Close Friends
 
-*Friends mentioned frequently or important to the user*
+<guide>Friends mentioned frequently or important to the user</guide>
 
 ## Work Relationships
 
 ### Manager/Boss
-- **Name**:
-- **Role**:
-- **Working Style**: *How to work effectively with them*
-- **Notes**:
+<guide>Who they report to, working dynamics</guide>
 
 ### Direct Reports
-*If applicable*
+<guide>If applicable — people who report to them</guide>
 
 ### Key Collaborators
-*Important colleagues, frequent collaborators*
+<guide>Important colleagues, frequent collaborators</guide>
 
 ### Clients/Stakeholders
-*External relationships that matter*
+<guide>External relationships that matter</guide>
 
 ## Professional Network
 
-*Mentors, advisors, important connections*
+<guide>Mentors, advisors, important connections</guide>
 
 ## Other Important People
 
-*Anyone else Elle should know about*
+<guide>Anyone else Elle should know about</guide>
 
 ---
 
 ## Relationship Notes
 
-*Cross-cutting observations, relationship dynamics, things to be sensitive about*
+<guide>Cross-cutting observations, relationship dynamics, things to be sensitive about</guide>

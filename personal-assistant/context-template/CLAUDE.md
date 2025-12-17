@@ -31,6 +31,35 @@ The more you know, the more you can anticipate. The more you anticipate, the mor
     └── journal.md         # Append-only log of notable sessions
 ```
 
+## XML Tag Convention (CRITICAL)
+
+Context files use XML tags for structural guidance that must persist across all edits.
+
+**Rule: NEVER delete, edit, or move XML tags when updating context files.**
+
+Add user content around them, not in place of them. These tags ensure future Claude instances understand what each section is for.
+
+### Supported Tags
+
+| Tag | Purpose | Example |
+|-----|---------|---------|
+| `<guide>` | Explains what a section is for | `<guide>Near-term goals for this year</guide>` |
+| `<format>` | Shows how to structure entries | `<format>\| Date \| Event \| Person \|</format>` |
+
+### Correct Usage
+
+```markdown
+### This Year
+<guide>Near-term goals they're trying to achieve this year</guide>
+
+- Continue growing YouTube channel
+- Launch new product
+```
+
+The `<guide>` tag stays permanently. User content is added below it.
+
+---
+
 ## Loading Context
 
 **This file loads on every message.** For additional context, follow these principles:

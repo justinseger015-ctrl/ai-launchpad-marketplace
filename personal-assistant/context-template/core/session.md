@@ -7,36 +7,34 @@ update_policy: Update during sessions. Clear when switching major contexts or st
 ## Current State
 
 ### Energy & Mood
-*How they're feeling — affects communication style and task recommendations*
-- Energy level: *High / Medium / Low / Exhausted*
-- Mood: *Focused / Stressed / Relaxed / Frustrated / Excited*
+<guide>How they're feeling — affects communication style and task recommendations (High/Medium/Low/Exhausted, Focused/Stressed/Relaxed/Frustrated/Excited)</guide>
 
 ### Time Pressure
-*Deadlines or constraints affecting this session*
+<guide>Deadlines or constraints affecting this session</guide>
 
 ### Context from Outside
-*Relevant things that happened since last session*
+<guide>Relevant things that happened since last session</guide>
 
 ## Current Focus
 
-*What we're working on right now*
+<guide>What we're working on right now</guide>
 
 ## Active Tasks
 
-*Immediate tasks in progress*
+<guide>Immediate tasks in progress</guide>
 
 ## Decisions Pending
 
-*Choices or decisions that need to be made*
+<guide>Choices or decisions that need to be made</guide>
 
 ## Blockers
 
-*What's preventing progress*
+<guide>What's preventing progress</guide>
 
 ## Quick Wins Available
 
-*Small things that could be knocked out quickly*
+<guide>Small things that could be knocked out quickly</guide>
 
 ## Notes for Next Session
 
-*Context to carry forward — what future Elle should know*
+<guide>Context to carry forward — what future Elle should know</guide>
