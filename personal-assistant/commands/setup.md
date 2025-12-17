@@ -27,7 +27,7 @@ If the file doesn't exist or is empty, create it with this content. If the file 
   "outputStyle": "personal-assistant:Personal Assistant",
   "statusLine": {
     "type": "command",
-    "command": "cat | jq -r '.output_style.name'"
+    "command": "INPUT=$(cat); STYLE_NAME=$(echo \"$INPUT\" | jq -r '.output_style.name // \"default\"'); STYLE_PLUGIN=$(echo \"$INPUT\" | jq -r '.output_style.plugin // \"\"'); if [ -n \"$STYLE_PLUGIN\" ]; then DISPLAY=\"$STYLE_NAME@$STYLE_PLUGIN\"; else DISPLAY=\"$STYLE_NAME\"; fi; COST=$(echo \"$INPUT\" | jq -r '.cost.total_cost_usd // 0'); TIME=$(echo \"$INPUT\" | jq -r '.cost.total_duration_ms // 0'); if [ \"$TIME\" -lt 60000 ]; then SECS=$((TIME / 1000)); TIME_DISPLAY=\"${SECS}s\"; elif [ \"$TIME\" -lt 3600000 ]; then MINS=$((TIME / 60000)); SECS=$(((TIME % 60000) / 1000)); TIME_DISPLAY=\"${MINS}m ${SECS}s\"; else HOURS=$((TIME / 3600000)); MINS=$(((TIME % 3600000) / 60000)); TIME_DISPLAY=\"${HOURS}h ${MINS}m\"; fi; PLUGINS=$(ls -1d ~/.claude/plugins/marketplaces/*/ 2>/dev/null | wc -l | tr -d ' '); TOOLS=$(uv tool list 2>/dev/null | tail -n +2 | wc -l | tr -d ' ' || echo 0); ADDED=$(echo \"$INPUT\" | jq -r '.cost.total_lines_added // 0'); REMOVED=$(echo \"$INPUT\" | jq -r '.cost.total_lines_removed // 0'); LINES=\"\"; if [ \"$ADDED\" != \"0\" ] || [ \"$REMOVED\" != \"0\" ]; then LINES=\" │ +$ADDED/-$REMOVED\"; fi; printf \"%s │ \\$%.2f │ %s Plugins │ %s UV Tools │ %s%s\" \"$DISPLAY\" \"$COST\" \"$PLUGINS\" \"$TOOLS\" \"$TIME_DISPLAY\" \"$LINES\""
   }
 }
 ```
@@ -63,23 +63,24 @@ cp -r ~/.claude/plugins/marketplaces/ai-launchpad/personal-assistant/context-tem
 ls ~/.claude/.context/
 ```
 
-You should see: `CLAUDE.md`, `context-update.md`, `core/`, `session/`, `projects/`
+You should see: `CLAUDE.md`, `context-update.md`, `core/`
 
 ## What Gets Created
 
 ```
 ~/.claude/.context/
 ├── CLAUDE.md              # Main instructions (loaded on every message)
-├── context-update.md      # Update instructions (Stop hook)
-├── core/                  # Your enduring context
-│   ├── identity.md        # Who you are
-│   ├── preferences.md     # How you work
-│   ├── workflows.md       # Your standard procedures
-│   └── rules.md           # Learned rules from corrections
-├── session/
-│   └── current.md         # Current session context
-└── projects/
-    └── project_index.md   # Your project index
+├── context-update.md      # Update instructions
+└── core/                  # All your context
+    ├── identity.md        # Who you are
+    ├── preferences.md     # How you work
+    ├── workflows.md       # Your standard procedures
+    ├── relationships.md   # Key people in your life
+    ├── triggers.md        # Important dates and reminders
+    ├── projects.md        # Your projects (work + life)
+    ├── rules.md           # Learned rules from corrections
+    ├── session.md         # Current session context
+    └── journal.md         # Session history log
 ```
 
 ## Why External Storage?
@@ -89,12 +90,62 @@ Your context is stored **outside** the plugin directory so that:
 - Your context persists across plugin reinstalls
 - You own your data
 
+## Step 3: Onboarding — Get to Know the User
+
+<REQUIRED>
+After technical setup completes, transition to onboarding:
+
+"Now that Elle is set up, I'd love to get to know you better so I can be truly helpful. Would you like to spend a few minutes telling me about yourself?"
+</REQUIRED>
+
+**If YES**: Proceed with the onboarding conversation below.
+**If NO**: Let them know they can run `/personal-assistant:onboard` anytime, then skip to "After Setup".
+
+### Onboarding Conversation
+
+Have a natural conversation to learn about the user. Don't interrogate — be warm and curious. After each topic, **immediately write** the learned context to the appropriate file.
+
+#### Identity (write to `~/.claude/.context/core/identity.md`)
+
+Ask conversationally:
+1. "What should I call you?"
+2. "What do you do for work? What's your role like?"
+3. "Outside of work, what's important in your life right now?" (family, hobbies, health goals, etc.)
+4. "What are you trying to achieve this year — personally or professionally?"
+5. "What are your biggest challenges or frustrations right now?"
+
+#### Key People (write to `~/.claude/.context/core/relationships.md`)
+
+Ask naturally:
+- "Who are the important people in your life I should know about?" (partner, family, close colleagues, etc.)
+- For each person: name, relationship, any relevant context
+
+#### Preferences (write to `~/.claude/.context/core/preferences.md`)
+
+Ask about working style:
+1. "When I give you information, do you prefer quick bullet points or more detailed explanations?"
+2. "When you ask for help, do you want me to give you options to choose from, or just tell you what I'd recommend?"
+3. "Any tools, apps, or systems you use regularly that I should know about?"
+
+#### Current Focus (write to `~/.claude/.context/core/session.md`)
+
+Ask about right now:
+- "What are you working on or thinking about this week?"
+- "Anything coming up soon I should keep in mind?" (deadlines, events, decisions)
+
+### After Each Section
+
+Write the learned information to the appropriate context file immediately. Use the formats defined in each template file.
+
+---
+
 ## After Setup
 
 Let the user know:
+- Elle is now set up and personalized
 - The output style is active (no need to restart Claude Code)
-- Context is loaded on every user message
-- Context updates are prompted after each response
-- The user should see the status line now showing `personal-assistant:Personal Assistant`
-- The user can change the output style any time with `/output-style` or status line with `/statusline`.
-- The user can also completely disable the personal assistant plugin in the `/plugin` menu.
+- Context is loaded on every user message and updated as you learn more
+- They can see the status line showing `Personal Assistant@personal-assistant`
+- They can change settings anytime with `/output-style` or `/statusline`
+- They can re-run onboarding with `/personal-assistant:onboard` to update their context
+- They can disable the plugin in the `/plugin` menu
